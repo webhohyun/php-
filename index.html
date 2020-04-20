@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="ko" dir="ltr">
-
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="layout.css">
   <title>게시판</title>
 </head>
-
 <body>
   <div class="wrap">
     <div class="headerWrap">
@@ -21,7 +19,6 @@
       </header>
     </div>
     <section>
-
         <?php
         $connect = mysqli_connect('localhost', 'hohyun', 'cdr!56rkdcdr', 'hohyun') or die ("connect fail");
         $query ="select * from board order by number desc";
