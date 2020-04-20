@@ -1,0 +1,187 @@
+/*공통영역 시작*/
+/*css초기화*/
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,400,700&display=swap&subset=korean');
+/*font-family: 'Noto Sans KR', sans-serif;*/
+@font-face{
+  font-family:'AppleGothic';
+  src:url('../font/AppleSDGothicNeoR.ttf') format('truetype');
+      font-weight: normal;
+}
+@font-face{
+  font-family:'AppleGothic';
+  src:url('../font/AppleSDGothicNeoB.ttf') format('truetype');
+      font-weight: bold;
+}
+@font-face{
+  font-family:'AppleGothic';
+  src:url('../font/AppleSDGothicNeoSB.ttf') format('truetype');
+      font-weight: 500;
+}
+
+body {-ms-user-select: none; -moz-user-select: -moz-none; -webkit-user-select: none; -khtml-user-select: none; user-select:none; background:#f5f5f5;font-family: 'AppleGothic', sans-serif;font-size:12px;color:#fff;line-height:100%;font-weight:normal;padding:0px;margin:0px;letter-spacing:-0px; }
+html, body { width:100%;height:100%;letter-spacing:0px; font-size:10px;}
+div, p, ul, li, table, th, td, textarea, input, span, form, h1, h2, h3, h4, h5, h6, dt, dl, dd, em, sup {padding:0px;margin:0px;font-weight: normal;}
+ul, ol, dl, dd, dt, li { list-style-type:none;margin:0;padding:0px;line-height:100%;font-size:13px;color:#fff;letter-spacing:0px; }
+form, fieldset, p {margin:0;padding:0;border:0;}
+img {border:0;vertical-align:middle;outline:none;}
+a,a:link,a:visited,a:active{color:#fff;letter-spacing:normal;text-decoration:none;letter-spacing:-0.8px;outline: none;}
+a:hover{color:#fff;text-decoration:none;}
+input:focus{outline:none;}
+*{-webkit-tap-highlight-color: rgba(0,0,0,0);}
+button{outline: none; cursor: pointer;}
+input, textarea, button {-webkit-appearance:none; -moz-appearance:none; appearance:none;}
+input, textarea, button, select {-webkit-border-radius:0; -moz-border-radius:0; -o-border-radius:0; border-radius:0;}
+/*css초기화*/
+
+.clearfix::after{content:""; clear: both; display: block;}
+.floatLeft{float: left;}
+.wrap{width: 100%; height: 100%; margin: 0 auto; background: #000;}
+.textBox{display: block;}
+
+
+
+.headerWrap{width: 100%;}
+
+header{width: 1240px; padding: 0 20px; margin: 0 auto;}
+.logo h1{line-height: 70px; text-align: center;}
+section{width: 1240px; padding: 0 20px; margin: 0 auto; text-align: center;}
+section>.textBox{font-size: 20px; line-height: 30px;}
+section>button{width: 120px; height: 50px; margin: 0; padding: 0; border: 0; background: #fff; color: #000;}
+section h2{font-size: 25px; line-height: 40px;}
+.boardTitle>ul>li{
+
+}
+.boardTitle>ul>li>span{font-size: 15px; line-height: 50px;}
+.boardTitle>ul>li>span:nth-child(1){width: 170px;}
+.boardTitle>ul>li>span:nth-child(2){width: 700px;}
+.boardTitle>ul>li>span:nth-child(3){width: 140px;}
+.boardTitle>ul>li>span:nth-child(4){width: 140px;}
+.boardTitle>ul>li>span:nth-child(5){width: 90px;}
+
+.boardContent>ul>li>span{font-size: 15px; line-height: 50px;}
+.boardContent>ul>li>span:nth-child(1){width: 170px;}
+.boardContent>ul>li>a:nth-child(2) span{width: 700px; font-size: 15px; line-height: 50px;}
+.boardContent>ul>li>span:nth-child(3){width: 140px;}
+.boardContent>ul>li>span:nth-child(4){width: 140px;}
+.boardContent>ul>li>span:nth-child(5){width: 90px;}
+
+.even {
+  background: rgba(255,255,255,0.1);
+}
+
+.textWrite {
+  text-align: center;
+  padding-top: 20px;
+}
+.textWrite button{
+  width: 120px; height: 50px; margin: 0; padding: 0; border: 0; background: #fff; color: #000;
+}
+
+.textWrite:hover button{
+  color: red;
+}
+
+
+.view_table {
+  border: 1px solid #444444;
+  margin-top: 30px;
+}
+
+.view_title {
+  height: 30px;
+  text-align: center;
+  background-color: #cccccc;
+  color: white;
+  width: 1000px;
+}
+
+.view_id {
+  text-align: center;
+  background-color: #EEEEEE;
+  width: 30px;
+}
+
+.view_id2 {
+  background-color: white;
+  width: 60px;
+}
+
+.view_hit {
+  background-color: #EEEEEE;
+  width: 30px;
+  text-align: center;
+}
+
+.view_hit2 {
+  background-color: white;
+  width: 60px;
+}
+
+.view_content {
+  padding-top: 20px;
+  border-top: 1px solid #444444;
+  height: 500px;
+}
+
+.view_btn {
+  width: 700px;
+  height: 200px;
+  text-align: center;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.view_btn1 {
+  height: 50px;
+  width: 100px;
+  font-size: 20px;
+  text-align: center;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.view_comment_input {
+  width: 700px;
+  height: 500px;
+  text-align: center;
+  margin: auto;
+}
+
+.view_text3 {
+  font-weight: bold;
+  float: left;
+  margin-left: 20px;
+}
+
+.view_com_id {
+  width: 100px;
+}
+
+.view_comment {
+  width: 500px;
+}
+
+table.table2 {
+  border-collapse: separate;
+  border-spacing: 1px;
+  text-align: left;
+  line-height: 1.5;
+  border-top: 1px solid #ccc;
+  margin: 20px 10px;
+}
+
+table.table2 tr {
+  width: 50px;
+  padding: 10px;
+  font-weight: bold;
+  vertical-align: top;
+  border-bottom: 1px solid #ccc;
+}
+
+table.table2 td {
+  width: 100px;
+  padding: 10px;
+  vertical-align: top;
+  border-bottom: 1px solid #ccc;
+}

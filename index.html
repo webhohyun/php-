@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="layout.css">
+  <title>게시판</title>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="headerWrap">
+      <header>
+        <div class="logo">
+          <h1>
+            <a href="#">
+              <img src="HoHyun.png" alt="">
+            </a>
+          </h1>
+        </div>
+      </header>
+    </div>
+    <section>
+
+        <?php
+        $connect = mysqli_connect('localhost', 'hohyun', 'cdr!56rkdcdr', 'hohyun') or die ("connect fail");
+        $query ="select * from board order by number desc";
+        $result = $connect->query($query);
+        $total = mysqli_num_rows($result);
+        session_start();
+        if(isset($_SESSION['userid'])) {
+          echo $_SESSION['userid'];?>님 안녕하세요
+
+      <br />
+      <button type="button" name="button" onclick="location.href='./logout.php'">로그아웃</button>
+      <?php
+      }
+      else {
+        ?>
+      <button onclick="location.href='./login.php'">로그인</button>
+      <br />
+      <?php   }
+      ?>
+      <h2>자유게시판</h2>
+      <div class="boardTitle">
+        <ul>
+          <li class="clearfix">
+            <span class="textBox floatLeft">번호</span>
+            <span class="textBox floatLeft">제목</span>
+            <span class="textBox floatLeft">작성자</span>
+            <span class="textBox floatLeft">날짜</span>
+            <span class="textBox floatLeft">조회수</span>
+          </li>
+        </ul>
+      </div>
+      <div class="boardContent">
+        <ul>
+            <?php
+            while($rows = mysqli_fetch_assoc($result)){ //DB에 저장된 데이터 수 (열 기준)
+              if($total%2==0){
+            ?>
+              <li class="even clearfix">
+            <?php
+              }else{
+            ?>
+            <li class="clearfix">
+            <?php
+              }
+            ?>
+              <span class="textBox floatLeft"><?php echo $total?></span>
+              <a href="view.php?number=<?php echo $rows['number']?>">
+                <span class="textBox floatLeft">
+                  <?php echo $rows['title']?>
+                </span>
+              </a>
+              <span class="textBox floatLeft"><?php echo $rows['id']?></span>
+              <span class="textBox floatLeft"><?php echo $rows['date']?></span>
+              <span class="textBox floatLeft"><?php echo $rows['hit']?></span>
+            </li>
+            <?php
+              $total--;}
+            ?>
+        </ul>
+      </div>
+      <div class=textWrite>
+        <button onClick="location.href='./write.php'">글쓰기</button>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
